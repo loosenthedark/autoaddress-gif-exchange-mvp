@@ -7,7 +7,6 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './gif-search.component.html',
-  styleUrls: ['./gif-search.component.scss'],
 })
 export class GifSearchComponent {
   searchString: string = '';

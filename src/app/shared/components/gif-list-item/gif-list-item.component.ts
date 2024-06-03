@@ -14,7 +14,6 @@ import { GifDialogComponent } from '../gif-dialog/gif-dialog.component';
   standalone: true,
   imports: [CommonModule, MatDialogModule],
   templateUrl: './gif-list-item.component.html',
-  styleUrls: ['./gif-list-item.component.scss'],
 })
 export class GifListItemComponent {
   @Input() gif: IGifData | undefined;

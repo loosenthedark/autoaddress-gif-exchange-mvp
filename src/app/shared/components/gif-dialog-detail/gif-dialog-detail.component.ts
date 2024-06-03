@@ -10,7 +10,6 @@ import { GetTagsFromSlugPipe } from '../../pipes/get-tags-from-slug.pipe';
   standalone: true,
   imports: [CommonModule, FormatTitlePipe, GetTagsFromSlugPipe],
   templateUrl: './gif-dialog-detail.component.html',
-  styleUrls: ['./gif-dialog-detail.component.scss'],
 })
 export class GifDialogDetailComponent {
   @Input() gif: IGifData | undefined;

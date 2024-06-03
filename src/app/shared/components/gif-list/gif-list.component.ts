@@ -9,7 +9,6 @@ import { GifListItemComponent } from '../gif-list-item/gif-list-item.component';
   standalone: true,
   imports: [CommonModule, GifListItemComponent],
   templateUrl: './gif-list.component.html',
-  styleUrls: ['./gif-list.component.scss'],
 })
 export class GifListComponent {
   @Input() gifs: IGifData[] = [];
