@@ -1,40 +1,56 @@
 <!-- <ng-container> -->
-<div class="grid grid-cols-2 md:grid-cols-6 gap-4 w-2/3 mx-auto">
-  <div class="grid gap-4">
-    <autoaddress-gif-list-item
-      *ngFor="let gif of gifs.slice(0, 8)"
-      [gif]="gif"
-    ></autoaddress-gif-list-item>
-  </div>
-  <div class="grid gap-4">
-    <autoaddress-gif-list-item
-      *ngFor="let gif of gifs.slice(8, 16)"
-      [gif]="gif"
-    ></autoaddress-gif-list-item>
-  </div>
-  <div class="grid gap-4">
-    <autoaddress-gif-list-item
-      *ngFor="let gif of gifs.slice(16, 24)"
-      [gif]="gif"
-    ></autoaddress-gif-list-item>
-  </div>
-  <div class="grid gap-4">
-    <autoaddress-gif-list-item
-      *ngFor="let gif of gifs.slice(24, 32)"
-      [gif]="gif"
-    ></autoaddress-gif-list-item>
-  </div>
-  <div class="grid gap-4">
-    <autoaddress-gif-list-item
-      *ngFor="let gif of gifs.slice(32, 40)"
-      [gif]="gif"
-    ></autoaddress-gif-list-item>
-  </div>
-  <div class="grid gap-4">
-    <autoaddress-gif-list-item
-      *ngFor="let gif of gifs.slice(40, 48)"
-      [gif]="gif"
-    ></autoaddress-gif-list-item>
-  </div>
+<div
+  [ngClass]="
+    gifs && gifs.length > 0
+      ? 'grid grid-cols-2 md:grid-cols-6 gap-4 w-2/3 mx-auto'
+      : 'max-w-md mx-auto'
+  "
+>
+  <ng-container *ngIf="gifs && gifs.length > 0; else noGifsFound">
+    <div class="grid gap-4">
+      <autoaddress-gif-list-item
+        *ngFor="let gif of gifs.slice(0, 8)"
+        [gif]="gif"
+      ></autoaddress-gif-list-item>
+    </div>
+    <div class="grid gap-4">
+      <autoaddress-gif-list-item
+        *ngFor="let gif of gifs.slice(8, 16)"
+        [gif]="gif"
+      ></autoaddress-gif-list-item>
+    </div>
+    <div class="grid gap-4">
+      <autoaddress-gif-list-item
+        *ngFor="let gif of gifs.slice(16, 24)"
+        [gif]="gif"
+      ></autoaddress-gif-list-item>
+    </div>
+    <div class="grid gap-4">
+      <autoaddress-gif-list-item
+        *ngFor="let gif of gifs.slice(24, 32)"
+        [gif]="gif"
+      ></autoaddress-gif-list-item>
+    </div>
+    <div class="grid gap-4">
+      <autoaddress-gif-list-item
+        *ngFor="let gif of gifs.slice(32, 40)"
+        [gif]="gif"
+      ></autoaddress-gif-list-item>
+    </div>
+    <div class="grid gap-4">
+      <autoaddress-gif-list-item
+        *ngFor="let gif of gifs.slice(40, 48)"
+        [gif]="gif"
+      ></autoaddress-gif-list-item></div
+  ></ng-container>
 </div>
+<ng-template #noGifsFound>
+  <div
+    class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+    role="alert"
+  >
+    <span class="font-medium">No GIFs found!</span> Please try searching again
+    with a different search term.
+  </div>
+</ng-template>
 <!-- </ng-container> -->

@@ -20,7 +20,7 @@ export class GifDialogComponent {
   gif: IGifData;
 
   constructor(
-    private _dialogRef: MatDialogRef<GifDialogComponent>,
+    public dialogRef: MatDialogRef<GifDialogComponent>,
     @Inject(MAT_DIALOG_DATA) gif: IGifData
   ) {
     this.gif = gif;
