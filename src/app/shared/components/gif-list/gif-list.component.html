@@ -1,3 +1,40 @@
-<ng-container *ngFor="let gif of gifs">
-  <img [src]="gif.images.fixed_width.url" [alt]="gif.title"
-/></ng-container>
+<!-- <ng-container> -->
+<div class="grid grid-cols-2 md:grid-cols-6 gap-4 w-2/3 mx-auto">
+  <div class="grid gap-4">
+    <autoaddress-gif-list-item
+      *ngFor="let gif of gifs.slice(0, 8)"
+      [gif]="gif"
+    ></autoaddress-gif-list-item>
+  </div>
+  <div class="grid gap-4">
+    <autoaddress-gif-list-item
+      *ngFor="let gif of gifs.slice(8, 16)"
+      [gif]="gif"
+    ></autoaddress-gif-list-item>
+  </div>
+  <div class="grid gap-4">
+    <autoaddress-gif-list-item
+      *ngFor="let gif of gifs.slice(16, 24)"
+      [gif]="gif"
+    ></autoaddress-gif-list-item>
+  </div>
+  <div class="grid gap-4">
+    <autoaddress-gif-list-item
+      *ngFor="let gif of gifs.slice(24, 32)"
+      [gif]="gif"
+    ></autoaddress-gif-list-item>
+  </div>
+  <div class="grid gap-4">
+    <autoaddress-gif-list-item
+      *ngFor="let gif of gifs.slice(32, 40)"
+      [gif]="gif"
+    ></autoaddress-gif-list-item>
+  </div>
+  <div class="grid gap-4">
+    <autoaddress-gif-list-item
+      *ngFor="let gif of gifs.slice(40, 48)"
+      [gif]="gif"
+    ></autoaddress-gif-list-item>
+  </div>
+</div>
+<!-- </ng-container> -->
