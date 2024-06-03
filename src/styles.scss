@@ -198,3 +198,7 @@ th {
 
 @tailwind components;
 @tailwind utilities;
+
+.dialog-centered {
+  transform: translate(-50%, -50%);
+}
