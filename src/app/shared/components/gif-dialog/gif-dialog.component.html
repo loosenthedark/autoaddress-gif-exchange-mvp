@@ -1,6 +1,12 @@
-<img
-  [src]="gif.images.downsized_large.url"
-  [alt]="gif.title"
-  class="h-auto max-w-full rounded mx-auto mt-5"
-/>
-<autoaddress-gif-dialog-detail [gif]="gif"></autoaddress-gif-dialog-detail>
+<div class="relative">
+  <span
+    class="material-symbols-outlined absolute right-0 top-0 w-5 h-5 mr-4 mt-3 text-gray-400 transition"
+    >close</span
+  >
+  <img
+    [src]="gif.images.downsized_large.url"
+    [alt]="gif.title"
+    class="h-auto max-w-full rounded mx-auto pt-12"
+  />
+  <autoaddress-gif-dialog-detail [gif]="gif"></autoaddress-gif-dialog-detail>
+</div>
