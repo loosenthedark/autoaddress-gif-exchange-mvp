@@ -1,1 +1,3 @@
-<p>gif-list works!</p>
+<ng-container *ngFor="let gif of gifs">
+  <img [src]="gif.images.fixed_width.url" [alt]="gif.title"
+/></ng-container>

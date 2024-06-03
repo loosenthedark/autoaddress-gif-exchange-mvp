@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { IGifData } from '../../types/gif-data.interface';
 
 @Component({
   selector: 'autoaddress-gif-list',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './gif-list.component.html',
   styleUrls: ['./gif-list.component.scss'],
 })
-export class GifListComponent {}
+export class GifListComponent {
+  @Input() gifs: IGifData[] = [];
+}
