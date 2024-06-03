@@ -7,6 +7,8 @@
 // app-wide constants
 
 $coreFontFamily: "League Spartan", sans-serif;
+$homeBgColor: #eff5ff;
+$colorPrimary: #1d4ed8;
 
 // standard CSS reset
 
@@ -47,6 +49,7 @@ ul {
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  background: $homeBgColor;
 }
 
 body {
@@ -69,7 +72,8 @@ a {
 }
 
 a:active,
-a:focus-visible {
+a:focus-visible,
+input:focus-visible {
   outline: 0;
 }
 
