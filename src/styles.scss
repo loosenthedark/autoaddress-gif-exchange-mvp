@@ -1,3 +1,13 @@
+// League Spartan Google Fonts import (cf. https://fonts.google.com/specimen/League+Spartan?icon.size=24&icon.color=%235f6368&query=league+spartan)
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+// Material Symbols Outlined Google Fonts import (cf. https://fonts.google.com/icons?selected=Material+Symbols+Outlined:info:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=info&icon.size=24&icon.color=%235f6368&query=league+spartan)
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
+
+// app-wide constants
+
+$coreFontFamily: "League Spartan", sans-serif;
+
 // standard CSS reset
 
 address,
