@@ -7,11 +7,12 @@ import {
 } from '@angular/material/dialog';
 
 import { IGifData } from '../../types/gif-data.interface';
+import { GifDialogDetailComponent } from '../gif-dialog-detail/gif-dialog-detail.component';
 
 @Component({
   selector: 'autoaddress-gif-dialog',
   standalone: true,
-  imports: [CommonModule, MatDialogModule],
+  imports: [CommonModule, MatDialogModule, GifDialogDetailComponent],
   templateUrl: './gif-dialog.component.html',
   styleUrls: ['./gif-dialog.component.scss'],
 })
