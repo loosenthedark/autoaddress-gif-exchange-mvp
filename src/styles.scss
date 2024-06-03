@@ -68,15 +68,9 @@ a {
   background-color: #fff0;
 }
 
-a:active {
+a:active,
+a:focus-visible {
   outline: 0;
-}
-
-a,
-a:focus,
-a:hover,
-a:visited {
-  text-decoration: none;
 }
 
 b,

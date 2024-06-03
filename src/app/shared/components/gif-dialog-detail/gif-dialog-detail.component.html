@@ -3,7 +3,7 @@
     <li *ngIf="gif.user">
       <details class="group">
         <summary
-          class="flex items-center justify-between gap-2 p-2 font-medium marker:content-none hover:cursor-pointer"
+          class="flex items-center justify-between gap-2 p-2 font-medium marker:content-none"
         >
           <span class="flex gap-2">
             <img
@@ -12,7 +12,15 @@
               alt=""
             />
 
-            <span>GIF by {{ gif.user.display_name }}</span>
+            <span
+              >GIF by
+              <a
+                class="underline decoration-dotted decoration-blue-700 underline-offset-4"
+                [href]="gif.user.profile_url"
+                target="_blank"
+                >{{ gif.user.display_name }}</a
+              ></span
+            >
           </span>
         </summary>
       </details>
@@ -51,7 +59,14 @@
             </li>
             <li>
               <p>Tags</p>
-              <p class="font-light">{{ gif.slug }}</p>
+              <a
+                [href]="'https://giphy.com/explore/' + tag"
+                target="_blank"
+                *ngFor="let tag of gif.slug | getTagsFromSlug : '-'"
+                class="py-2 px-4 shadow-md no-underline rounded-full bg-blue-700 text-white font-sans font-light text-xs border-blue btn-primary inline-block hover:text-white hover:bg-blue-light focus:outline-none active:shadow-none mr-2 mb-2"
+              >
+                #{{ tag }}
+              </a>
             </li>
           </ul>
         </article>
