@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
@@ -15,9 +15,12 @@ export class GifSearchComponent {
     searchString: '',
   });
 
+  @Output() searchEvent = new EventEmitter<string>();
+
   constructor(private _formBuilder: FormBuilder) {}
 
   onFormSubmit(): void {
     this.searchString = this.searchForm.value.searchString ?? '';
+    this.searchEvent.emit(this.searchString);
   }
 }

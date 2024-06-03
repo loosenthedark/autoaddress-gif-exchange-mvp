@@ -26,4 +26,8 @@ export class HomeComponent implements OnInit {
   getTrendingGifs() {
     this.gifs$ = this._gifsService.getTrendingGifs();
   }
+
+  onSearch(searchString: string) {
+    this.gifs$ = this._gifsService.getSearchGifs(searchString);
+  }
 }

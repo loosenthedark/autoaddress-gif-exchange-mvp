@@ -9,6 +9,7 @@ import { IGetGifsResponse } from '../components/gif-list/types/get-gifs-response
 const GIPHY_API_KEY = environment.apiKey;
 const GIPHY_API_LIMIT = environment.apiLimit;
 const TRENDING_API_URL = environment.apiBaseUrl + '/trending';
+const SEARCH_API_URL = environment.apiBaseUrl + '/search';
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +23,18 @@ export class GifsService {
         params: {
           api_key: GIPHY_API_KEY,
           limit: GIPHY_API_LIMIT,
+        },
+      })
+      .pipe(map((resp) => resp.data));
+  }
+
+  getSearchGifs(searchTerm: string): Observable<IGifData[]> {
+    return this._http
+      .get<IGetGifsResponse>(SEARCH_API_URL, {
+        params: {
+          api_key: GIPHY_API_KEY,
+          limit: GIPHY_API_LIMIT,
+          q: searchTerm,
         },
       })
       .pipe(map((resp) => resp.data));

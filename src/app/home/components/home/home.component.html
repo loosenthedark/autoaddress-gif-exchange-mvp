@@ -1,4 +1,6 @@
+<autoaddress-gif-search
+  (searchEvent)="onSearch($event)"
+></autoaddress-gif-search>
 <ng-container *ngIf="gifs$ | async as gifs">
-  <autoaddress-gif-search></autoaddress-gif-search>
   <autoaddress-gif-list [gifs]="gifs"></autoaddress-gif-list>
 </ng-container>
