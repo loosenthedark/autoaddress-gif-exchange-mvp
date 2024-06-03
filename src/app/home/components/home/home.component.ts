@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { GifsService } from '../../../shared/services/gifs.service';
 import { IGifData } from '../../../shared/types/gif-data.interface';
 import { GifListComponent } from '../../../shared/components/gif-list/gif-list.component';
+import { GifSearchComponent } from '../../../shared/components/gif-search/gif-search.component';
 
 @Component({
   selector: 'autoaddress-home',
   standalone: true,
-  imports: [GifListComponent, CommonModule],
+  imports: [GifListComponent, CommonModule, GifSearchComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
